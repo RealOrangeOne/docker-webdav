@@ -1,0 +1,10 @@
+version: "2.3"
+
+services:
+  dav:
+    build:
+      context: .
+    volumes:
+      - ".:/srv"
+    ports:
+      - "80:80"

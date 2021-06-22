@@ -6,7 +6,7 @@ RUN mkdir -p /run/nginx
 
 RUN htpasswd -b -c /etc/nginx/.htpasswd user password
 
-COPY ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./default.conf /etc/nginx/http.d/default.conf
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
 ENV PUID 1000

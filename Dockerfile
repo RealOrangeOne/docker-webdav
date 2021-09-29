@@ -9,6 +9,8 @@ RUN htpasswd -b -c /etc/nginx/.htpasswd user password
 COPY ./default.conf /etc/nginx/http.d/default.conf
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
+RUN touch /etc/nginx/extra.conf
+
 ENV PUID 1000
 
 EXPOSE 80
